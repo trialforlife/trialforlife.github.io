@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto&subset=latin,cyrillic-ext);
+
 body {
     width: 100%;
     font-family: 'Roboto', sans-serif;
@@ -6,32 +7,80 @@ body {
 
 .wrap {
     width: 1200px;
-    height: 3330px;
     margin-left: auto;
     margin-right: auto;
-
 }
-header{
+
+header {
     background-image: url("../img/landing.png");
     background-repeat: no-repeat;
     background-position-x: center;
     background-position-y: top;
     height: 67px;
 }
-.inner{
+
+.inner {
     background-image: url("../img/landing.png");
     background-repeat: no-repeat;
     background-position-x: center;
     background-position-y: -112px;
-    height: 2000px;
+    height: 3235px;
 }
 
-button#dropdownMenu1 {
+.paper-btn {
+    border-radius: 0;
+    text-transform: uppercase;
+}
+
+.paper-btn::after {
+    clear: both;
+}
+
+button.call {
     float: right;
     width: 175px;
     margin-right: 14px;
     margin-top: 12px;
     border: 2px solid #FAE744;
+}
+
+button.fast-order {
+    float: left;
+    margin-top: 417px;
+    font-weight: bold;
+    margin-left: 14px;
+    height: 70px;
+    width: 291px;
+    background: #FAE744;
+    font-size: 2rem;
+    border: none;
     border-radius: 0;
-    text-transform: uppercase;
+}
+
+button.req {
+    float: right;
+    margin-top: 1906px;
+    margin-right: 152px;
+    width: 365px;
+    font-weight: bold;
+    margin-left: 14px;
+    height: 70px;
+    background: #FAE744;
+    font-size: 2rem;
+    border: none;
+    border-radius: 0;
+}
+
+button.question {
+    margin-top: 614px;
+    border: 2px solid #55DDF6;
+    margin-left: 501px;
+    background: none;
+    font-size: 2.07rem;
+    height: 72px;
+}
+
+.btn-wrap {
+    width: 100%;
+    float: left;
 }
