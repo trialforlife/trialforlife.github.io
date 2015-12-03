@@ -1,5 +1,7 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto&subset=latin,cyrillic-ext);
 body {
     width: 100%;
+    font-family: 'Roboto', sans-serif;
 }
 
 .wrap {
