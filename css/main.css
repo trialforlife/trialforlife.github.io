@@ -84,3 +84,12 @@ button.question {
     width: 100%;
     float: left;
 }
+/*forms*/
+input.paper-input.form-control {
+    margin: 2px 0 13px 77px;
+    height: 48px;
+    border: 2px solid #FAE744;
+    border-radius: 0;
+    width: 347px;
+    float: left;
+}
