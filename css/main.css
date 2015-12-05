@@ -85,6 +85,7 @@ button.question {
     float: left;
 }
 /*forms*/
+/*todo fix height bug at mobile */
 .overlay{
     /*same as img width*/
     width: 1200px;
