@@ -100,3 +100,17 @@ input.paper-input.form-control {
     width: 347px;
     float: left;
 }
+
+.popup{
+    background-color: #fff;
+    margin-left: -250px;
+    margin-top: 0;
+    width: 500px;
+    padding-bottom: 30px;
+    left: 50%;
+    top: 15%;
+    position: absolute;
+}
+.popup h3{
+    text-align: center;
+}
