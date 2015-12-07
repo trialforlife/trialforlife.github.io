@@ -1,9 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8a22c54e-a0b7-4d44-aa8e-8dfeacb76694" name="Default" comment="" />
+    <list default="true" id="8a22c54e-a0b7-4d44-aa8e-8dfeacb76694" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/obj/config-dev.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/obj/config-elkjop.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/obj/config-race.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/obj/config.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/obj/cordova.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/obj/e" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/obj/favicon.ico" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/obj/fonts/tnt.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/obj/fonts/tnt.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/obj/fonts/tnt.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/obj/fonts/tnt.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/obj/images/icon-completed--active.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/obj/images/icon-completed.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/obj/images/icon-failed--active.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/obj/images/icon-failed.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/obj/images/icon-warning--active.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/obj/images/icon-warning.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/obj/images/logo-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/obj/images/logo.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/obj/images/status-completed.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/obj/images/status-failed.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/obj/images/status-warning.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/obj/images/webmap/markers/location-20.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/obj/images/webmap/markers/marker-active.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/obj/images/webmap/markers/marker.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/obj/images/webmap/markers/user.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/obj/images/webmap/resources/arrowDwn.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/obj/images/webmap/resources/arrowUp.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/obj/images/webmap/resources/callout34.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/obj/images/webmap/resources/close10.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/obj/images/webmap/resources/compass_arrow4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/obj/images/webmap/resources/compass_n.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/obj/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/obj/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/obj/manifest.appcache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/obj/scripts-map/micellomap.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/obj/scripts-map/micellomap_canvas.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/obj/scripts-map/micellomap_control.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/obj/scripts-map/micellomap_data.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/obj/scripts-map/micellomap_gui.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/obj/scripts-map/micellomap_popup.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/obj/scripts-map/micellomap_theme.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/obj/scripts-map/micellomap_tile.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/obj/scripts-map/micellomap_view.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/obj/scripts-map/micellomap_zlist.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/obj/scripts-map/mm_theme.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/obj/scripts/6cd6adf5.main.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/obj/scripts/app.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/obj/styles/97c0b95b.screen.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/obj/styles/dec3b190.main.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/obj/styles/screen.min.css" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="trialforlife.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
+    <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,6 +71,9 @@
   </component>
   <component name="FavoritesManager">
     <favorites_list name="trialforlife.github.io" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -74,38 +131,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="trialforlife.github.io" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="trialforlife.github.io" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="trialforlife.github.io" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="obj" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="trialforlife.github.io" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="trialforlife.github.io" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="obj" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fonts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -236,7 +261,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="118" y="-817" width="1440" height="811" extended-state="1" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.43892616" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -264,5 +289,15 @@
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/obj/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>
