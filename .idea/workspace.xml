@@ -1,48 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8a22c54e-a0b7-4d44-aa8e-8dfeacb76694" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/obj/images/webmap/resources/arrowDwn.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/obj/images/webmap/resources/arrowUp.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/obj/images/webmap/resources/callout34.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/obj/images/webmap/resources/close10.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/obj/images/webmap/resources/compass_arrow4.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/obj/images/webmap/resources/compass_n.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/obj/e" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/obj/favicon.ico" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/obj/images/webmap/markers/location-20.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/obj/fonts/tnt.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/obj/fonts/tnt.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/obj/fonts/tnt.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/obj/images/webmap/markers/user.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.name" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/obj/scripts/app.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/obj/config-dev.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/obj/config-elkjop.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/obj/config-race.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/obj/config.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/obj/cordova.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/obj/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/obj/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/obj/scripts-map/micellomap.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/obj/scripts-map/micellomap_canvas.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/obj/scripts-map/micellomap_control.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/obj/scripts-map/micellomap_data.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/obj/scripts-map/micellomap_gui.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/obj/scripts-map/micellomap_popup.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/obj/scripts-map/micellomap_theme.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/obj/scripts-map/micellomap_tile.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/obj/scripts-map/micellomap_view.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/obj/scripts-map/micellomap_zlist.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/obj/scripts-map/mm_theme.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/obj/styles/screen.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/obj/fonts/tnt.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/trialforlife.github.io.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="8a22c54e-a0b7-4d44-aa8e-8dfeacb76694" name="Default" comment="" />
     <ignored path="trialforlife.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -70,8 +29,8 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-209" />
-    <option name="y" value="-937" />
+    <option name="x" value="118" />
+    <option name="y" value="-817" />
     <option name="width" value="1440" />
     <option name="height" value="811" />
   </component>
@@ -276,10 +235,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-209" y="-937" width="1440" height="811" extended-state="0" />
+    <frame x="118" y="-817" width="1440" height="811" extended-state="1" />
     <editor active="false" />
     <layout>
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32931727" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.43892616" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />

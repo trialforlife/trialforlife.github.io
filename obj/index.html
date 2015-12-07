@@ -1,111 +1,45 @@
-<!DOCTYPE html><html lang=en xmlns:ng=http://angularjs.org><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge,chrome=1"><title>Track&Trace</title><meta name=viewport content="width=device-width, maximum-scale=1.0, initial-scale=1.0, user-scalable=no"><link rel=stylesheet href=styles/screen.min.css><body ng-app=myApp><div ng-hide=connectionStatus class=connectionStatus>Offline mode</div><div ng-view="" class=container></div><script type=text/ng-template id=/views/login><div id="login" class="fullscreen">
-        <div class="login half div-center animated">
-          <form ng-submit="login.formSubmit()" name="loginForm">
-            <h1 ng-hide="login.error" class="center">{{"Login"|i18n}}</h1>
-            <h1 ng-show="login.error" class="center">{{login.error}}</h1>
-            <div class="clearfix">
-              <label for="" class="third f-left right">{{"Select language"|i18n}}</label>
-              <select ng-model="language" ng-options="key as val for (key,val) in languageList" ng-required="true" required class="input half"></select>
-            </div>
-            <div class="clearfix">
-              <label for="" class="third f-left right">{{"Email"|i18n}}</label>
-              <input type="email" value="Tracker" placeholder="Login" ng-model="login.username" required class="input half">
-            </div>
-            <div class="clearfix">
-              <label for="" class="third f-left right">{{"Password"|i18n}}</label>
-              <input type="password" value="Tracker" placeholder="Password" ng-model="login.password" required class="input half">
-            </div>
-            <div class="clearfix">
-              <label class="third f-left right">&nbsp;<span ng-hide="connectionStatus">{{"You need"|i18n}}&nbsp;<i class="icon-signal"></i></span></label>
-              <input type="button" ng-click="login.formSubmit()" value="{{&quot;Login_button&quot;|i18n}}" ng-disabled="loginForm.$invalid" class="button primary half">
-            </div><!--.clearfix
-            <label class="third right">&nbsp;</label>
-            <input type="button" value="Reset Data" ng-click="resetData()" class="button danger half">-->
-          </form>
-        </div>
-      </div></script><script type=text/ng-template id=/views/observations><div id="observations" class="fullscreen">
-        <div class="two-thirds div-center">
-          <h1 class="center"><span class="f-right quarter right">
-              <button ng-click="logOut()" class="button small">{{"Logout"|i18n}}</button></span>{{"Observations"|i18n}}</h1>
-          <button ng-disabled="!shoppersCount || !connectionStatus" ng-click="sendDataToServer()" class="button info full"><span ng-show="shoppersCount">{{"Send collected info to server"|i18n}}<span ng-show="shoppersCount" class="shoppersCount f-right"><i class="icon-user"></i>{{shoppersCount}}</span></span><span ng-hide="shoppersCount">{{"There is no data to send"|i18n}}</span></button>
-          <div ng-show="showLoadDataNotification">
-            <p ng-show="connectionStatus" class="center">{{"Loading data..."|i18n}}</p>
-            <p ng-show="!connectionStatus" class="center">{{"You need"|i18n}}&nbsp;<i class="icon-signal"></i>{{"to load data"|i18n}}</p>
-          </div>
-          <div ng-show="!showLoadDataNotification &amp;&amp; !observations.data.length">
-            <p class="center">{{"There are no maps"|i18n}}</p>
-          </div>
-          <div class="observations">
-            <div ng-show="observations.data.length" ng-repeat="observation in observations.data" ng-hide="connectionStatus || observation.quiz">
-              <div class="observation clearfix"><small class="network-alert">{{"Need wifi"|i18n}}&nbsp;<i class="icon-signal"></i></small>
-                <div class="date">{{observation.planned_date|date:"shortDate"}}</div>
-                <div class="info">
-                  <h4>{{observation.name}}<em>{{"in"|i18n}} «{{observation.shop.name}}»</em>
-                    <address>{{observation.shop.city}} {{observation.shop.address}}</address>
-                  </h4>
-                  <div ng-show="observation.description"><small>{{observation.description}}</small></div>
-                </div>
-              </div>
-            </div>
-            <div ng-show="connectionStatus || observation.quiz" ng-repeat="observation in observations.data"><a href="#/map/{{observation.iid}}" class="observation clearfix">
-                <div class="date">{{observation.planned_date|date:"shortDate"}}</div>
-                <div class="info">
-                  <h4>{{observation.name}}<em>{{"in"|i18n}} «{{observation.shop.name}}»</em>
-                    <address>{{observation.shop.city}} {{observation.shop.address}}</address>
-                  </h4>
-                  <div ng-show="observation.description"><small>{{observation.description}}</small></div>
-                </div></a></div>
-          </div>
-          <footer class="clearfix">
-            <div class="quarter f-left">
-              <button ng-disabled="!connectionStatus" ng-click="reloadData()" class="full button warning">{{"Update"|i18n}}</button>
-            </div>
-            <div class="three-quarters f-left">
-              <p>{{"Attention!"|i18n}}<br><small>{{"Open observation to save the map before going offline"|i18n}}</small></p>
-            </div>
-          </footer>
-        </div>
-      </div></script><script type=text/ng-template id=/views/map><div class="sidebar">
-        <div class="action-buttons">
-          <section>
-            <button type="button" ng-click="backToList()" class="button primary"><i class="icon-list"></i><small>{{"Back to List"|i18n}}</small></button>
-            <button type="button" ng-click="resetTrackerLog()" class="button danger"><i class="icon-reload"></i><small>{{"Reset current tracking"|i18n}}</small></button>
-          </section>
-          <section>
-            <!--button.button.danger(type="button", ng-click="chaoticMode()") Chaos mode-->
-            <button type="button" ng-click="undoLastStep()" class="button warning"><i class="icon-ccw"></i><small>{{"Undo last step"|i18n}}</small></button>
-          </section>
-          <section>
-            <button type="button" ng-click="showQuiz = !showQuiz" ng-show="observation.quiz.quiz_questions" class="button success"><i class="icon-check"></i><small ng-show="!showQuiz">{{"Show quiz"|i18n}}</small><small ng-show="showQuiz">{{"Hide quiz"|i18n}}</small></button>
-            <div ng-show="trackerForm.$invalid" class="quiz-notify center">{{"Fill All Fields Before Complete"|i18n}}</div>
-            <button type="submit" ng-click="SaveTrackerLog(trackerForm)" ng-disabled="trackerForm.$invalid" class="button inverse"><i class="icon-ok"></i><small>{{"Complete"|i18n}}</small></button>
-          </section>
-        </div>
-      </div>
-      <form id="section-list" name="trackerForm" ng-show="showQuiz &amp;&amp; observation.quiz.quiz_questions" class="panel quiz-list animated fadeInLeft">
-        <h3 class="center">{{"Quiz"|i18n}}</h3>
-        <ul>
-          <li ng-repeat="question in observation.quiz.quiz_questions" ng-switch="question.question_type">
-            <label>{{question.name}}<small>{{question.description}}</small></label>
-            <select ng-switch-when="options only" name="i{{question.id}}" id="i{{question.id}}" ng-model="question.answer" ng-options="val.id as val.option for val in question.quiz_question_options" ng-required="true" required></select>
-            <input ng-switch-when="custom float only" type="number" step="any" name="i{{question.id}}" id="i{{question.id}}" ng-model="question.answer" ng-required="true" required class="input">
-            <input ng-switch-when="custom text only" type="text" name="i{{question.id}}" id="i{{question.id}}" ng-model="question.answer" ng-required="true" required class="input">
-            <div ng-switch-default>{{ question.question_type }}</div>
-          </li>
-        </ul>
-      </form>
-      <div id="observations" ng-hide="map.isDataComplete" class="panel">
-        <div class="animated fadeIn">
-          <div ng-hide="observation">
-            <h1 class="center">{{map.title}}</h1>
-            <p class="center">{{"Loading data..."|i18n}}</p>
-          </div>
-          <ul ng-show="observation" class="topcoat-list">
-            <h1 class="center"><span class="f-right">{{observation.planned_date|date:"shortDate"}}</span>{{observation.name}} in «{{observation.shop.name}}»</h1>
-            <p class="center">{{"Downloading data..."|i18n}}</p>
-          </ul>
-        </div>
-      </div>
-      <div id="mapLayout" ng-show="map.isDataComplete" class="panel">
-        <div id="mapElement"></div>
-      </div></script><script src=cordova.js></script><script src=index.js></script><script src=scripts/app.min.js></script><script src=scripts-map/micellomap.js></script><script src=scripts-map/micellomap_zlist.js></script><script src=scripts-map/micellomap_gui.js></script><script src=scripts-map/micellomap_data.js></script><script src=scripts-map/micellomap_canvas.js></script><script src=scripts-map/micellomap_tile.js></script><script src=scripts-map/micellomap_theme.js></script><script src=scripts-map/micellomap_view.js></script><script src=scripts-map/micellomap_popup.js></script><script src=scripts-map/micellomap_control.js></script><script src=scripts-map/mm_theme.js></script><script>app.initialize();</script>
+<!DOCTYPE html><!--[if lt IE 7 ]> <html class="ie6 lt-ie7 lt-ie8 lt-ie9 lt-ie10"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7 lt-ie8 lt-ie9 lt-ie10"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8 lt-ie9 lt-ie10"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9 lt-ie10"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="en" xmlns:ng="http://angularjs.org">
+  <!-- <![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Object Tracker</title>
+    <meta name="viewport" content="width=device-width, maximum-scale=1.0, initial-scale=1.0, user-scalable=no">
+    <!-- FAVICON-->
+    <!--link(rel='apple-touch-icon', sizes='57x57', href='images/favicons/apple-touch-icon-57x57.png')-->
+    <!--link(rel='apple-touch-icon', sizes='60x60', href='images/favicons/apple-touch-icon-60x60.png')-->
+    <!--link(rel='apple-touch-icon', sizes='72x72', href='images/favicons/apple-touch-icon-72x72.png')-->
+    <!--link(rel='apple-touch-icon', sizes='76x76', href='images/favicons/apple-touch-icon-76x76.png')-->
+    <!--link(rel='apple-touch-icon', sizes='114x114', href='images/favicons/apple-touch-icon-114x114.png')-->
+    <!--link(rel='apple-touch-icon', sizes='120x120', href='images/favicons/apple-touch-icon-120x120.png')-->
+    <!--link(rel='apple-touch-icon', sizes='144x144', href='images/favicons/apple-touch-icon-144x144.png')-->
+    <!--link(rel='apple-touch-icon', sizes='152x152', href='images/favicons/apple-touch-icon-152x152.png')-->
+    <!--link(rel='apple-touch-icon', sizes='180x180', href='images/favicons/apple-touch-icon-180x180.png')-->
+    <!--link(rel='icon', type='image/png', href='images/favicons/favicon-32x32.png', sizes='32x32')-->
+    <!--link(rel='icon', type='image/png', href='images/favicons/android-chrome-192x192.png', sizes='192x192')-->
+    <!--link(rel='icon', type='image/png', href='images/favicons/favicon-96x96.png', sizes='96x96')-->
+    <!--link(rel='icon', type='image/png', href='images/favicons/favicon-16x16.png', sizes='16x16')-->
+    <!--link(rel='manifest', href='images/favicons/manifest.json')-->
+    <!--link(rel='shortcut icon', href='images/favicons/favicon.ico')-->
+    <!--meta(name='msapplication-TileColor', content='#0d478a')-->
+    <!--meta(name='msapplication-TileImage', content='images/favicons/mstile-144x144.png')-->
+    <!--meta(name='msapplication-config', content='images/favicons/browserconfig.xml')-->
+    <!--meta(name='theme-color', content='#ffffff')-->
+    <link rel="stylesheet" href="styles/dec3b190.main.css">
+    <link rel="stylesheet" href="styles/97c0b95b.screen.css">
+  </head>
+  <body ng-app="myApp">
+    <div ng-hide="connectionStatus" class="connectionStatus">Offline mode</div>
+    <application>
+      <div ui-view="application" ng-cloak=""></div>
+    </application>
+    <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+    <script src="scripts/6cd6adf5.main.js"></script>
+
+  </body>
+</html>
